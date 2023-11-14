@@ -14,19 +14,21 @@
  * limitations under the License.
  */
 
-package com.alibaba.nacos.plugin.datasource.constants;
+package com.alibaba.nacos.plugin.datasource.impl.kingbase;
+
+import com.alibaba.nacos.plugin.datasource.constants.DatabaseTypeConstant;
+import com.alibaba.nacos.plugin.datasource.impl.base.BaseConfigInfoMapper;
 
 /**
- * DatabaseType Constant.
+ * The kingbase implementation of ConfigInfoMapper.
  *
  * @author Long Yu
  **/
-public class DatabaseTypeConstant {
+public class ConfigInfoMapperByKingbase extends BaseConfigInfoMapper {
     
-    public static final String POSTGRESQL = "postgresql";
-    
-    public static final String MYSQL = "mysql";
-
-    public static final String KINGBASE = "kingbase";
+    @Override
+    public String getDataSource() {
+        return DatabaseTypeConstant.KINGBASE;
+    }
     
 }
